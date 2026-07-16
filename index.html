@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Whole Yield</title>
+<meta name="description" content="Whole Yield is a small independent software and media studio in Phoenix, Arizona, building Manna, Lucentcast, and other tools and shows.">
+<link rel="canonical" href="https://wholeyield.com/">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf7f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17140e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Whole Yield">
+<meta property="og:description" content="A small independent software and media studio in Phoenix, Arizona.">
+<meta property="og:url" content="https://wholeyield.com/">
+
+<style>
+:root{
+  --bg:#faf7f1; --surface:#fffdf8; --surface2:#f4efe4;
+  --ink:#2b2417; --ink2:#6b5f4a; --ink3:#a3947a;
+  --line:#e8e0d0; --line2:#d9cfba;
+  --accent:#9a5b1b; --accent-ink:#7d4712; --accent-soft:#f7e8d0;
+  --shadow:0 1px 2px rgba(43,36,23,.06),0 8px 24px -12px rgba(43,36,23,.18);
+  --serif:'Iowan Old Style',Palatino,'Palatino Linotype',Charter,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:12px;
+  --max:760px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#17140e; --surface:#1f1b12; --surface2:#282215;
+    --ink:#ece2cd; --ink2:#b3a68d; --ink3:#7d7259;
+    --line:#332d1e; --line2:#453c28;
+    --accent:#edb135; --accent-ink:#f3c45e; --accent-soft:#3a2f14;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font:16px/1.65 var(--sans);
+  background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  padding:0 20px;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:currentColor}
+::selection{background:var(--accent-soft)}
+
+.wrap{max-width:var(--max);margin:0 auto}
+
+/* masthead */
+header{padding:64px 0 0}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mark{font-size:22px;line-height:1}
+.brand .name{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.01em}
+.rule{height:1px;background:var(--line);margin:22px 0 0}
+
+/* hero */
+.hero{padding:44px 0 8px}
+h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(30px,5.2vw,42px);line-height:1.22;
+  letter-spacing:-.01em;margin-bottom:16px;
+}
+.lede{font-size:18px;color:var(--ink2);max-width:56ch}
+.lede + .lede{margin-top:14px}
+
+section{padding:40px 0 0}
+h2{
+  font-size:12px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);font-weight:700;margin-bottom:18px;
+}
+.prose p{color:var(--ink2);max-width:62ch}
+.prose p + p{margin-top:14px}
+
+/* ventures */
+.venture{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.venture + .venture{margin-top:14px}
+.venture h3{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.01em}
+.venture .role{
+  display:inline-block;margin-top:7px;
+  font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+  color:var(--accent-ink);background:var(--accent-soft);
+  padding:3px 9px;border-radius:99px;
+}
+@media (prefers-color-scheme: dark){.venture .role{color:var(--accent-ink)}}
+.venture p{margin-top:11px;color:var(--ink2)}
+
+/* contact */
+.contact a{font-family:var(--serif);font-size:21px;font-weight:700}
+.contact .where{margin-top:8px;color:var(--ink3);font-size:15px}
+
+footer{
+  margin-top:56px;padding:20px 0 48px;border-top:1px solid var(--line);
+  color:var(--ink3);font-size:14px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="mark" aria-hidden="true">🌾</span>
+      <span class="name">Whole Yield</span>
+    </div>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Software and media, built small and built to last.</h1>
+      <p class="lede">Whole Yield is the independent studio of Daniel Horne, based in Phoenix, Arizona. It is where a handful of long-running projects live: a Bible study app, a podcast post-production service, and the audio work behind a show.</p>
+      <p class="lede">The work is deliberately narrow. Few projects, carried a long way, rather than many carried a little.</p>
+    </div>
+
+    <section>
+      <h2>What this is</h2>
+      <div class="prose">
+        <p>Whole Yield is a one-person studio, not an agency and not a startup looking for a round. Daniel builds and ships the software himself, drawing on a background in enterprise conversational AI and cloud architecture, plus years of running a small business before this one.</p>
+        <p>The name is the intent: take a thing all the way to harvest rather than abandoning it half grown.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <article class="venture">
+        <h3>Manna</h3>
+        <span class="role">Bible study app</span>
+        <p>A Bible reading and study app built on a public-domain translation, paired with Manna Radio Theater, a dramatized audio companion that keeps the scripture text verbatim. Built so the plain text is always one tap away from anything else on the screen.</p>
+      </article>
+
+      <article class="venture">
+        <h3>Lucentcast</h3>
+        <span class="role">Podcast post-production</span>
+        <p>Productized post-production for independent podcasters. A raw recording goes in and a release-ready episode comes back: mastered audio, a transcript, show notes, and chapter markers. The service is software end to end, with a human quality check on every delivery.</p>
+      </article>
+
+      <article class="venture">
+        <h3>Perfumed Decay</h3>
+        <span class="role">Podcast, co-hosted</span>
+        <p>A podcast Daniel co-hosts with two others as equal partners. Whole Yield is not the owner of the show. It is where Daniel's side of the work lives: production, audio tooling, and post.</p>
+      </article>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>
+      <p class="where">Phoenix, Arizona</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Whole Yield</span>
+    <span>Phoenix, Arizona</span>
+  </footer>
+
+</div>
+</body>
+</html>
