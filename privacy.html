@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy | Whole Yield</title>
+<meta name="description" content="How Whole Yield handles information on wholeyield.com and in the Manna app. The short version: the website collects nothing, and Manna keeps your study data on your device.">
+<link rel="canonical" href="https://wholeyield.com/privacy.html">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf7f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17140e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Privacy | Whole Yield">
+<meta property="og:description" content="How Whole Yield handles information on wholeyield.com and in the Manna app.">
+<meta property="og:url" content="https://wholeyield.com/privacy.html">
+
+<style>
+:root{
+  --bg:#faf7f1; --surface:#fffdf8; --surface2:#f4efe4;
+  --ink:#2b2417; --ink2:#6b5f4a; --ink3:#a3947a;
+  --line:#e8e0d0; --line2:#d9cfba;
+  --accent:#9a5b1b; --accent-ink:#7d4712; --accent-soft:#f7e8d0;
+  --shadow:0 1px 2px rgba(43,36,23,.06),0 8px 24px -12px rgba(43,36,23,.18);
+  --serif:'Iowan Old Style',Palatino,'Palatino Linotype',Charter,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:12px;
+  --max:760px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#17140e; --surface:#1f1b12; --surface2:#282215;
+    --ink:#ece2cd; --ink2:#b3a68d; --ink3:#7d7259;
+    --line:#332d1e; --line2:#453c28;
+    --accent:#edb135; --accent-ink:#f3c45e; --accent-soft:#3a2f14;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font:16px/1.65 var(--sans);
+  background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  padding:0 20px;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:currentColor}
+::selection{background:var(--accent-soft)}
+
+.wrap{max-width:var(--max);margin:0 auto}
+
+/* masthead */
+header{padding:64px 0 0}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mark{font-size:22px;line-height:1}
+.brand .name{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.01em}
+.brand a{border-bottom:none;color:var(--ink)}
+.brand a:hover{color:var(--accent)}
+.rule{height:1px;background:var(--line);margin:22px 0 0}
+
+/* hero */
+.hero{padding:44px 0 8px}
+h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(30px,5.2vw,42px);line-height:1.22;
+  letter-spacing:-.01em;margin-bottom:16px;
+}
+.updated{font-size:14px;color:var(--ink3);letter-spacing:.02em}
+
+section{padding:40px 0 0}
+h2{
+  font-size:12px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);font-weight:700;margin-bottom:18px;
+}
+h3{
+  font-family:var(--serif);font-size:19px;font-weight:700;
+  letter-spacing:.01em;margin:26px 0 9px;color:var(--ink);
+}
+.prose p{color:var(--ink2);max-width:62ch}
+.prose p + p{margin-top:14px}
+.prose ul{margin:12px 0 0 20px;color:var(--ink2);max-width:62ch}
+.prose li{margin-top:7px}
+.prose strong{color:var(--ink);font-weight:700}
+
+/* callout */
+.callout{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.callout p{color:var(--ink2)}
+.callout p + p{margin-top:12px}
+
+.lede{font-size:18px;color:var(--ink2);max-width:56ch}
+
+footer{
+  margin-top:56px;padding:20px 0 48px;border-top:1px solid var(--line);
+  color:var(--ink3);font-size:14px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+footer a{color:var(--ink3)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="mark" aria-hidden="true">🌾</span>
+      <span class="name"><a href="/">Whole Yield</a></span>
+    </div>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Privacy</h1>
+      <p class="updated">Last updated 15 July 2026</p>
+    </div>
+
+    <section>
+      <h2>The short version</h2>
+      <div class="callout">
+        <p>This website collects nothing. No analytics, no cookies, no tracking pixels, no advertising, and nothing loaded from anyone else's server.</p>
+        <p>Manna, the Bible study app, has no account by default, no analytics, and no ads. Your reading history, highlights, notes, and prayers stay on your device unless you deliberately turn on cloud sync. The app does ask our server for the news list when it opens, which means our server sees your device's IP address.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who this covers</h2>
+      <div class="prose">
+        <p>Whole Yield is the independent studio of Daniel Horne, in Phoenix, Arizona. This policy covers this website, <strong>wholeyield.com</strong>, and the <strong>Manna</strong> Bible study app, including its beta builds distributed through TestFlight.</p>
+        <p>It does not cover Lucentcast, the podcast post-production service, which runs on its own site and publishes its own policy at <a href="https://lucentcast.com/privacy.html">lucentcast.com/privacy.html</a>. It does not cover Perfumed Decay, a podcast Daniel co-hosts with two equal partners and which Whole Yield does not own or operate.</p>
+        <p>Questions, or a request about your information: <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>This website</h2>
+      <div class="prose">
+        <p>Nothing is collected automatically. This site is a couple of static pages. It runs no analytics, sets no cookies, stores nothing in your browser, loads no web fonts, and makes no requests to third-party servers. There is no ability to track you here, across this site or any other.</p>
+        <p>The only thing on the page that leaves it is the contact link, and that just opens your own email program. Nothing is sent until you send it.</p>
+        <p>Like any web host, GitHub Pages serves these files and processes connection data such as IP addresses in the ordinary course of delivering the page. That is GitHub's processing under its own privacy statement, not something Whole Yield receives, stores, or looks at.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>The Manna app</h2>
+      <div class="prose">
+
+        <h3>What Manna does not do</h3>
+        <p>Manna contains no analytics or telemetry of any kind, no crash-reporting service, no advertising, no ad identifier, no third-party tracking SDKs, and no social login. It asks for no system permissions: no notifications, no microphone, no camera, no location, no contacts, no photos. It never asks for your date of birth, your phone number, or your address. It makes no calls to any AI or language-model service, and your notes and prayers are never used to train a model.</p>
+
+        <h3>What stays on your device</h3>
+        <p>By default, everything. Manna stores your study data in the app's own local storage on your device, and it stays there. That includes your reading history and position, reading-plan progress, highlights, verse notes, memory deck, prayer list, reflections, and your app settings and display name if you set one.</p>
+        <p>None of that is sent anywhere unless you turn on cloud sync yourself. Deleting the app deletes this data. Because it lives on the device rather than in an account, you should use the app's export option to keep a backup, since clearing the app's data would otherwise erase your only copy.</p>
+
+        <h3>What Manna requests over the network</h3>
+        <p>Be aware of one automatic request: <strong>when you open Manna, it asks our server for the current news list.</strong> That request carries no account, no name, and no study data, but as with any web request our server necessarily receives your device's IP address in order to answer it. If our server cannot be reached, the app quietly falls back to the news snapshot bundled inside it and carries on working.</p>
+        <p>The rest of the network activity happens only when you do something:</p>
+        <ul>
+          <li><strong>Chapter narration</strong> streams from the Internet Archive when you press play, so archive.org receives the request and your IP address, under its own privacy policy.</li>
+          <li><strong>Video thumbnails and players</strong> come from YouTube on chapters that have an attached video, so Google receives your IP address under its own privacy policy. The thumbnail loads with the chapter; the player only loads if you tap it.</li>
+          <li><strong>Outside links</strong> open in your browser and are then that site's business, not ours.</li>
+        </ul>
+        <p>The Bible text, the reading plans, and the kids' stories are bundled inside the app, so ordinary reading and study need no network at all. Read-aloud uses your device's own built-in speech, and no audio of you is recorded, and none is ever sent anywhere.</p>
+
+        <h3>Optional cloud sync, and only if you ask for it</h3>
+        <p>Manna has an optional sync feature so your own devices can share one study record. It is off unless you switch it on, and during the beta it requires an invite code handed out directly, so it is not something you can turn on by accident.</p>
+        <p>If you do turn it on, be clear about what that means: <strong>your whole study record is uploaded to our server</strong>, and that includes the free-text parts. Your notes, your reflections, and your prayer list, including any names or details you have written into them, are stored on the server along with your display name. Please keep that in mind when deciding what to write and whether to switch sync on.</p>
+        <p>The details:</p>
+        <ul>
+          <li><strong>Who you are to the server</strong> is a display name you choose and an access token the app holds. There is no email address, no password, and no verified identity.</li>
+          <li><strong>Where it runs.</strong> The sync server is a machine Daniel operates himself in Phoenix, Arizona. Your study data is not on anyone else's cloud, and it is not shared with, sold to, or disclosed to any third party.</li>
+          <li><strong>What is kept.</strong> Your current record plus the last 20 revisions of it, so a mistake can be undone. The server also keeps an operational log which records the IP address used when an account is registered.</li>
+          <li><strong>Feedback.</strong> If you use the in-app feedback form, which needs a sync account, your message is stored with your display name and the IP address it came from, so we can reply and understand the report.</li>
+          <li><strong>Turning it off.</strong> Ask and we will delete your synced record and your feedback. Because sync is optional, you can also just leave it off and keep everything on your device.</li>
+        </ul>
+
+        <h3>TestFlight and the app stores</h3>
+        <p>Beta builds are distributed through Apple's TestFlight. To install one you give your email address to Apple, not to us, and Apple tells us how many testers there are and whether builds are being installed. Apple also collects crash logs and basic usage data from TestFlight builds and may share crash reports with us, subject to the choice you make on your own device. That collection is Apple's, under Apple's privacy policy, and it happens whether or not we want it. We have added no crash reporter of our own.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we never do</h2>
+      <div class="prose">
+        <p>We do not sell your information. We do not share it for advertising, and there is no advertising in any of this. We do not track you across other apps or websites, and there is nothing in Manna capable of it. We do not use your study data, your notes, or your prayers to train machine-learning models. We do not build a profile of you.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Your choices and your rights</h2>
+      <div class="prose">
+        <p>You can ask what we hold about you, ask us to correct it, or ask us to delete it, and we will do it. In practice there is usually nothing to ask about, because unless you turned on sync we hold nothing that identifies you.</p>
+        <p>Depending on where you live, you may have further rights under your own state's or country's privacy law. Rather than parse which one applies to you, tell us what you need at <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a> and we will honour it.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Security</h2>
+      <div class="prose">
+        <p>Access to the sync server is limited to Daniel. Data in transit is encrypted. Access tokens are stored on the server only as hashes, so the server does not hold your token in a readable form. No system is perfectly secure, and this one is small and self-hosted rather than run by a large provider, which is a trade worth knowing about: fewer people can see your data, and there is no large security team behind it either.</p>
+        <p>If personal information is exposed in a breach, we will notify the people affected as required by Arizona law (A.R.S. 18-552) and by any other law that applies to you.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <div class="prose">
+        <p>Manna includes a Kids section of illustrated Bible stories, which is bundled in the app and needs no network and no account to read. The app asks no one for personal information, and a sync account can only be created with an invite code given out directly to adults. We do not knowingly collect personal information from children under 13. If you believe a child has given us information through sync or feedback, write to <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a> and we will delete it.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <div class="prose">
+        <p>This policy will change as the app does, and the honest reason to expect that is that Manna is early. The current version always lives at <a href="https://wholeyield.com/privacy.html">wholeyield.com/privacy.html</a>, with the date at the top. If a change means we start collecting something we do not collect today, we will say so plainly rather than quietly widening the language.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="prose">
+        <p><a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a></p>
+        <p>Whole Yield, Phoenix, Arizona.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Whole Yield</span>
+    <span><a href="/">Home</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
