@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Whole Yield">
+  <rect width="64" height="64" rx="13" fill="#0a9d63"/>
+  <path d="M32 12c14 12 14 28 0 40-14-12-14-28 0-40z" fill="#ffffff"/>
+  <path d="M32 18v28" stroke="#0a9d63" stroke-width="4" stroke-linecap="round"/>
+</svg>
