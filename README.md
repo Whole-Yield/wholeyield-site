@@ -1,7 +1,14 @@
 # Whole Yield site
 
 The one-page site for **wholeyield.com**. Static HTML, no build system, no
-dependencies, no analytics, no web fonts. `index.html` is the whole site.
+dependencies, and no analytics. `index.html` and `privacy.html` are the site.
+
+One typeface ships with the repo in `fonts/`: Inter, under the SIL Open Font
+License. It is SELF-HOSTED on purpose. Do not swap it for a Google Fonts or
+other CDN link. `privacy.html` states in writing that the site "makes no
+requests to third-party servers" and that the typeface "is served from this
+same site rather than from a font provider", so a CDN link would make the
+published privacy policy false.
 
 To preview it, open `index.html` in a browser. That is the entire dev loop.
 

@@ -6,9 +6,9 @@
 <title>Privacy | Whole Yield</title>
 <meta name="description" content="How Whole Yield handles information on wholeyield.com and in the Manna app. The short version: the website collects nothing, and Manna keeps your study data on your device.">
 <link rel="canonical" href="https://wholeyield.com/privacy.html">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf7f1">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17140e">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfbf9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0e0d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127806;</text></svg>">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Privacy | Whole Yield">
@@ -16,87 +16,57 @@
 <meta property="og:url" content="https://wholeyield.com/privacy.html">
 
 <style>
+@font-face{font-family:'InterVar';src:url('fonts/inter-latin.woff2') format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap}
 :root{
-  --bg:#faf7f1; --surface:#fffdf8; --surface2:#f4efe4;
-  --ink:#2b2417; --ink2:#6b5f4a; --ink3:#a3947a;
-  --line:#e8e0d0; --line2:#d9cfba;
-  --accent:#9a5b1b; --accent-ink:#7d4712; --accent-soft:#f7e8d0;
-  --shadow:0 1px 2px rgba(43,36,23,.06),0 8px 24px -12px rgba(43,36,23,.18);
-  --serif:'Iowan Old Style',Palatino,'Palatino Linotype',Charter,Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --radius:12px;
-  --max:760px;
+  --bg:#fbfbf9; --surface:#ffffff; --tint:#f2f5f2;
+  --ink:#101511; --ink2:#535854; --ink3:#8e948e;
+  --line:#e7e8e4; --accent:#0a9d63; --accent-ink:#07784b; --accent-soft:#e2f4ec;
+  --sans:'InterVar',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --max:820px;
 }
 @media (prefers-color-scheme: dark){
-  :root{
-    --bg:#17140e; --surface:#1f1b12; --surface2:#282215;
-    --ink:#ece2cd; --ink2:#b3a68d; --ink3:#7d7259;
-    --line:#332d1e; --line2:#453c28;
-    --accent:#edb135; --accent-ink:#f3c45e; --accent-soft:#3a2f14;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);
-  }
+  :root{--bg:#0c0e0d;--surface:#141816;--tint:#141816;
+    --ink:#eef1ee;--ink2:#a2a9a3;--ink3:#767c77;
+    --line:#232825;--accent:#34d99b;--accent-ink:#5fe6b3;--accent-soft:#0f2a20}
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font:16px/1.65 var(--sans);
-  background:var(--bg); color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-  padding:0 20px;
-}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
-a:hover{border-bottom-color:currentColor}
+body{font:16px/1.7 var(--sans);background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;padding:0 clamp(20px,4vw,40px);letter-spacing:-.011em}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--ink)}
 ::selection{background:var(--accent-soft)}
-
 .wrap{max-width:var(--max);margin:0 auto}
 
-/* masthead */
-header{padding:64px 0 0}
-.brand{display:flex;align-items:baseline;gap:10px}
-.brand .mark{font-size:22px;line-height:1}
-.brand .name{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.01em}
-.brand a{border-bottom:none;color:var(--ink)}
-.brand a:hover{color:var(--accent)}
-.rule{height:1px;background:var(--line);margin:22px 0 0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;
+  border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:16px;
+  letter-spacing:-.02em;color:var(--ink)}
+.logo:hover{color:var(--accent)}
+.back{font-size:14.5px;font-weight:500}
 
-/* hero */
-.hero{padding:44px 0 8px}
-h1{
-  font-family:var(--serif);font-weight:700;
-  font-size:clamp(30px,5.2vw,42px);line-height:1.22;
-  letter-spacing:-.01em;margin-bottom:16px;
-}
-.updated{font-size:14px;color:var(--ink3);letter-spacing:.02em}
+.hero{padding:clamp(44px,6vw,72px) 0 clamp(28px,3vw,40px)}
+h1{font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.03em;
+  font-weight:500;margin-bottom:14px}
+.updated{font-size:14px;color:var(--ink3)}
 
-section{padding:40px 0 0}
-h2{
-  font-size:12px;letter-spacing:.11em;text-transform:uppercase;
-  color:var(--ink3);font-weight:700;margin-bottom:18px;
-}
-h3{
-  font-family:var(--serif);font-size:19px;font-weight:700;
-  letter-spacing:.01em;margin:26px 0 9px;color:var(--ink);
-}
-.prose p{color:var(--ink2);max-width:62ch}
+section{padding:clamp(34px,4vw,48px) 0 0}
+h2{font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.01em;margin-bottom:16px}
+h3{font-size:19px;font-weight:600;letter-spacing:-.024em;margin:28px 0 9px;color:var(--ink)}
+.prose p{color:var(--ink2);max-width:66ch}
 .prose p + p{margin-top:14px}
-.prose ul{margin:12px 0 0 20px;color:var(--ink2);max-width:62ch}
-.prose li{margin-top:7px}
-.prose strong{color:var(--ink);font-weight:700}
+.prose ul{margin:12px 0 0 20px;color:var(--ink2);max-width:66ch}
+.prose li{margin-top:8px}
+.prose strong{color:var(--ink);font-weight:600}
 
-/* callout */
-.callout{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-  padding:20px 22px;box-shadow:var(--shadow);
-}
-.callout p{color:var(--ink2)}
+.callout{background:var(--tint);border:1px solid var(--line);border-radius:24px;
+  padding:clamp(22px,3vw,32px)}
+.callout p{color:var(--ink2);max-width:66ch}
 .callout p + p{margin-top:12px}
 
-.lede{font-size:18px;color:var(--ink2);max-width:56ch}
-
-footer{
-  margin-top:56px;padding:20px 0 48px;border-top:1px solid var(--line);
-  color:var(--ink3);font-size:14px;
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-}
+footer{margin-top:clamp(56px,7vw,88px);padding:24px 0 56px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  color:var(--ink3);font-size:14px}
 footer a{color:var(--ink3)}
 footer a:hover{color:var(--accent)}
 </style>
@@ -104,13 +74,10 @@ footer a:hover{color:var(--accent)}
 <body>
 <div class="wrap">
 
-  <header>
-    <div class="brand">
-      <span class="mark" aria-hidden="true">🌾</span>
-      <span class="name"><a href="/">Whole Yield</a></span>
-    </div>
-    <div class="rule"></div>
-  </header>
+  <nav>
+    <a class="logo" href="/"><span aria-hidden="true">&#127806;</span>Whole Yield</a>
+    <a class="back" href="/">Back to site</a>
+  </nav>
 
   <main>
     <div class="hero">
@@ -130,7 +97,7 @@ footer a:hover{color:var(--accent)}
       <h2>Who this covers</h2>
       <div class="prose">
         <p>Whole Yield is the independent studio of Daniel Horne, in Phoenix, Arizona. This policy covers this website, <strong>wholeyield.com</strong>, and the <strong>Manna</strong> Bible study app, including its beta builds distributed through TestFlight.</p>
-        <p>It does not cover Lucentcast, the podcast post-production service, which runs on its own site and publishes its own policy at <a href="https://lucentcast.com/privacy.html">lucentcast.com/privacy.html</a>. It does not cover Perfumed Decay, a podcast Daniel co-hosts with two equal partners and which Whole Yield does not own or operate.</p>
+        <p>It does not cover Lucentcast, the podcast post-production service, which runs on its own site and publishes its own policy at <a href="https://lucentcast.com/privacy.html">lucentcast.com/privacy.html</a>. It does not cover Perfume(D)ecay, a podcast Daniel co-hosts with two equal partners and which Whole Yield does not own or operate.</p>
         <p>Questions, or a request about your information: <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>.</p>
       </div>
     </section>
@@ -138,7 +105,7 @@ footer a:hover{color:var(--accent)}
     <section>
       <h2>This website</h2>
       <div class="prose">
-        <p>Nothing is collected automatically. This site is a couple of static pages. It runs no analytics, sets no cookies, stores nothing in your browser, loads no web fonts, and makes no requests to third-party servers. There is no ability to track you here, across this site or any other.</p>
+        <p>Nothing is collected automatically. This site is a couple of static pages. It runs no analytics, sets no cookies, stores nothing in your browser, and makes no requests to third-party servers. It uses one typeface, which is served from this same site rather than from a font provider, so loading the page tells no one else that you visited. There is no ability to track you here, across this site or any other.</p>
         <p>The only thing on the page that leaves it is the contact link, and that just opens your own email program. Nothing is sent until you send it.</p>
         <p>Like any web host, GitHub Pages serves these files and processes connection data such as IP addresses in the ordinary course of delivering the page. That is GitHub's processing under its own privacy statement, not something Whole Yield receives, stores, or looks at.</p>
       </div>

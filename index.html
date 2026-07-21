@@ -4,157 +4,161 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Whole Yield</title>
-<meta name="description" content="Whole Yield is a small independent software and media studio in Phoenix, Arizona, building Manna, Lucentcast, and other tools and shows.">
-<link rel="canonical" href="https://wholeyield.com/">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf7f1">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17140e">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Whole Yield">
-<meta property="og:description" content="A small independent software and media studio in Phoenix, Arizona.">
-<meta property="og:url" content="https://wholeyield.com/">
-
+<meta name="description" content="Whole Yield is the independent software and media studio of Daniel Horne, in Phoenix, Arizona.">
 <style>
+@font-face{font-family:'InterVar';src:url('fonts/inter-latin.woff2') format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap}
+
 :root{
-  --bg:#faf7f1; --surface:#fffdf8; --surface2:#f4efe4;
-  --ink:#2b2417; --ink2:#6b5f4a; --ink3:#a3947a;
-  --line:#e8e0d0; --line2:#d9cfba;
-  --accent:#9a5b1b; --accent-ink:#7d4712; --accent-soft:#f7e8d0;
-  --shadow:0 1px 2px rgba(43,36,23,.06),0 8px 24px -12px rgba(43,36,23,.18);
-  --serif:'Iowan Old Style',Palatino,'Palatino Linotype',Charter,Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --radius:12px;
-  --max:760px;
+  --bg:#fbfbf9; --surface:#ffffff; --tint:#f2f5f2;
+  --ink:#101511; --ink2:#535854; --ink3:#8e948e;
+  --line:#e7e8e4; --accent:#0a9d63; --accent-ink:#07784b; --accent-soft:#e2f4ec;
+  --sans:'InterVar',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --max:1080px; --r:18px;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#17140e; --surface:#1f1b12; --surface2:#282215;
-    --ink:#ece2cd; --ink2:#b3a68d; --ink3:#7d7259;
-    --line:#332d1e; --line2:#453c28;
-    --accent:#edb135; --accent-ink:#f3c45e; --accent-soft:#3a2f14;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);
-  }
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c0e0d;--surface:#141816;--tint:#141816;
+    --ink:#eef1ee;--ink2:#a2a9a3;--ink3:#767c77;
+    --line:#232825;--accent:#34d99b;--accent-ink:#5fe6b3;--accent-soft:#0f2a20}
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font:16px/1.65 var(--sans);
-  background:var(--bg); color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-  padding:0 20px;
-}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
-a:hover{border-bottom-color:currentColor}
+body{font:16px/1.65 var(--sans);background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;padding:0 clamp(20px,4vw,40px);letter-spacing:-.011em}
+a{color:inherit;text-decoration:none}
 ::selection{background:var(--accent-soft)}
-
 .wrap{max-width:var(--max);margin:0 auto}
 
-/* masthead */
-header{padding:64px 0 0}
-.brand{display:flex;align-items:baseline;gap:10px}
-.brand .mark{font-size:22px;line-height:1}
-.brand .name{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.01em}
-.rule{height:1px;background:var(--line);margin:22px 0 0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:16px;letter-spacing:-.02em}
+.btn{background:var(--accent);color:#fff;font-weight:500;font-size:14.5px;
+  padding:9px 18px;border-radius:99px;white-space:nowrap;transition:opacity .16s}
+.btn:hover{opacity:.86}
+@media (prefers-color-scheme:dark){.btn{color:#08130e}}
 
 /* hero */
-.hero{padding:44px 0 8px}
-h1{
-  font-family:var(--serif);font-weight:700;
-  font-size:clamp(30px,5.2vw,42px);line-height:1.22;
-  letter-spacing:-.01em;margin-bottom:16px;
-}
-.lede{font-size:18px;color:var(--ink2);max-width:56ch}
-.lede + .lede{margin-top:14px}
+.hero{position:relative;padding:clamp(56px,9vw,116px) 0 clamp(48px,6vw,80px);text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40% 20% auto;height:520px;
+  background:radial-gradient(closest-side,var(--accent-soft),transparent);
+  opacity:.85;z-index:-1;pointer-events:none}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;
+  color:var(--accent-ink);background:var(--accent-soft);padding:6px 14px;border-radius:99px}
+h1{font-size:clamp(34px,5.6vw,62px);line-height:1.06;letter-spacing:-.028em;font-weight:500;
+  margin:26px auto 22px;max-width:16ch}
+.lede{font-size:clamp(17px,1.7vw,19.5px);line-height:1.55;color:var(--ink2);
+  max-width:56ch;margin:0 auto}
+.cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ghost{border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  font-weight:500;font-size:14.5px;padding:9px 18px;border-radius:99px}
+.ghost:hover{border-color:var(--ink3)}
 
-section{padding:40px 0 0}
-h2{
-  font-size:12px;letter-spacing:.11em;text-transform:uppercase;
-  color:var(--ink3);font-weight:700;margin-bottom:18px;
-}
-.prose p{color:var(--ink2);max-width:62ch}
-.prose p + p{margin-top:14px}
+section{padding:clamp(52px,7vw,92px) 0 0}
+.eyebrow{font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.01em}
+h2{font-size:clamp(25px,3.2vw,38px);line-height:1.12;letter-spacing:-.028em;
+  font-weight:500;margin:12px 0 18px;max-width:20ch}
+.body{color:var(--ink2);font-size:17px;max-width:60ch}
+.body p+p{margin-top:16px}
 
-/* ventures */
-.venture{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-  padding:20px 22px;box-shadow:var(--shadow);
-}
-.venture + .venture{margin-top:14px}
-.venture h3{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.01em}
-.venture .role{
-  display:inline-block;margin-top:7px;
-  font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
-  color:var(--accent-ink);background:var(--accent-soft);
-  padding:3px 9px;border-radius:99px;
-}
-@media (prefers-color-scheme: dark){.venture .role{color:var(--accent-ink)}}
-.venture p{margin-top:11px;color:var(--ink2)}
+/* the statement panel */
+.panel{background:var(--tint);border:1px solid var(--line);border-radius:24px;
+  padding:clamp(28px,4.4vw,52px);margin-top:clamp(34px,4vw,48px)}
+.panel .quote{font-size:clamp(20px,2.7vw,30px);line-height:1.25;letter-spacing:-.028em;
+  font-weight:500;max-width:24ch}
+.panel .quote span{color:var(--accent)}
+
+/* project cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:16px;margin-top:clamp(28px,3.4vw,40px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 26px 28px;display:flex;flex-direction:column;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tag{font-size:12px;font-weight:500;color:var(--ink3)}
+.card h3{font-size:21px;font-weight:600;letter-spacing:-.026em;margin:9px 0 11px}
+.card p{color:var(--ink2);font-size:15.5px;flex:1}
+.state{margin-top:18px;font-size:13.5px;font-weight:500;color:var(--accent)}
 
 /* contact */
-.contact a{font-family:var(--serif);font-size:21px;font-weight:700}
-.contact .where{margin-top:8px;color:var(--ink3);font-size:15px}
+.contact{padding-top:clamp(60px,7vw,96px)}
+.cbox{background:var(--tint);border:1px solid var(--line);border-radius:24px;
+  padding:clamp(30px,4.6vw,56px);text-align:center}
+.cbox h2{margin:0 auto 20px}
+.cmail{display:inline-block;font-size:clamp(19px,2.6vw,27px);font-weight:600;
+  letter-spacing:-.03em;color:var(--accent)}
+.cmail:hover{color:var(--ink)}
+.cwhere{margin-top:12px;color:var(--ink3);font-size:15px}
 
-footer{
-  margin-top:56px;padding:20px 0 48px;border-top:1px solid var(--line);
-  color:var(--ink3);font-size:14px;
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-}
-footer a{color:var(--ink3)}
-footer a:hover{color:var(--accent)}
+footer{margin-top:clamp(64px,8vw,104px);padding:24px 0 56px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  color:var(--ink3);font-size:14px}
+footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <div class="brand">
-      <span class="mark" aria-hidden="true">🌾</span>
-      <span class="name">Whole Yield</span>
+  <nav>
+    <span class="logo"><span aria-hidden="true">🌾</span>Whole Yield</span>
+    <a class="btn" href="mailto:danielh@wholeyield.com">Get in touch</a>
+  </nav>
+
+  <header class="hero">
+    <span class="pill">Independent studio, Phoenix Arizona</span>
+    <h1>Software and media, built small and built to last.</h1>
+    <p class="lede">Whole Yield is the independent studio of Daniel Horne. It is where a handful of long-running projects live: a Bible study app, a podcast post-production service, and the audio work behind a show.</p>
+    <div class="cta">
+      <a class="btn" href="#projects">See the projects</a>
+      <a class="ghost" href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>
     </div>
-    <div class="rule"></div>
   </header>
 
   <main>
-    <div class="hero">
-      <h1>Software and media, built small and built to last.</h1>
-      <p class="lede">Whole Yield is the independent studio of Daniel Horne, based in Phoenix, Arizona. It is where a handful of long-running projects live: a Bible study app, a podcast post-production service, and the audio work behind a show.</p>
-      <p class="lede">The work is deliberately narrow. Few projects, carried a long way, rather than many carried a little.</p>
-    </div>
-
     <section>
-      <h2>What this is</h2>
-      <div class="prose">
-        <p>Whole Yield is a one-person studio, not an agency and not a startup looking for a round. Daniel builds and ships the software himself, drawing on a background in enterprise conversational AI and cloud architecture, plus years of running a small business before this one.</p>
-        <p>The name is the intent: take a thing all the way to harvest rather than abandoning it half grown.</p>
+      <p class="eyebrow">What this is</p>
+      <h2>A one-person studio, not an agency and not a startup looking for a round.</h2>
+      <div class="body">
+        <p>Daniel builds and ships the software himself, drawing on a background in enterprise conversational AI and cloud architecture, plus years of running a small business before this one.</p>
+        <p>The work is deliberately narrow. Few projects, carried a long way, rather than many carried a little.</p>
+      </div>
+      <div class="panel">
+        <p class="quote">The name is the intent: take a thing all the way to <span>harvest</span> rather than abandoning it half grown.</p>
       </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
+    <section id="projects">
+      <p class="eyebrow">Projects</p>
+      <h2>Three things, carried a long way.</h2>
+      <div class="cards">
 
-      <article class="venture">
-        <h3>Manna</h3>
-        <span class="role">Bible study app</span>
-        <p>A Bible reading and study app built on a public-domain translation, paired with Manna Radio Theater, a dramatized audio companion that keeps the scripture text verbatim. Built so the plain text is always one tap away from anything else on the screen.</p>
-      </article>
+        <article class="card">
+          <span class="tag">Bible study app</span>
+          <h3>Manna</h3>
+          <p>A Bible reading and study app built on a public-domain translation, paired with Manna Radio Theater, a dramatized audio companion that keeps the scripture text verbatim. Built so the plain text is always one tap away from anything else on the screen.</p>
+          <span class="state">In private beta</span>
+        </article>
 
-      <article class="venture">
-        <h3>Lucentcast</h3>
-        <span class="role">Podcast post-production</span>
-        <p>Productized post-production for independent podcasters. A raw recording goes in and a release-ready episode comes back: mastered audio, a transcript, show notes, and chapter markers. The service is software end to end, with a human quality check on every delivery.</p>
-      </article>
+        <article class="card">
+          <span class="tag">Podcast post-production</span>
+          <h3>Lucentcast</h3>
+          <p>Productized post-production for independent podcasters. A raw recording goes in and a release-ready episode comes back: mastered audio, a transcript, show notes, and chapter markers. The service is software end to end, with a human quality check on every delivery.</p>
+          <span class="state">Launching soon</span>
+        </article>
 
-      <article class="venture">
-        <h3>Perfumed Decay</h3>
-        <span class="role">Podcast, co-hosted</span>
-        <p>A podcast Daniel co-hosts with two others as equal partners. Whole Yield is not the owner of the show. It is where Daniel's side of the work lives: production, audio tooling, and post.</p>
-      </article>
+        <article class="card">
+          <span class="tag">Podcast, co-hosted</span>
+          <h3>Perfume(D)ecay</h3>
+          <p>A podcast Daniel co-hosts with two others as equal partners. Whole Yield is not the owner of the show. It is where Daniel's side of the work lives: production, audio tooling, and post.</p>
+          <a class="state" href="https://perfumeddecay.com">perfumeddecay.com</a>
+        </article>
+
+      </div>
     </section>
 
     <section class="contact">
-      <h2>Contact</h2>
-      <a href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>
-      <p class="where">Phoenix, Arizona</p>
+      <div class="cbox">
+        <h2>Get in touch.</h2>
+        <a class="cmail" href="mailto:danielh@wholeyield.com">danielh@wholeyield.com</a>
+        <p class="cwhere">Phoenix, Arizona</p>
+      </div>
     </section>
   </main>
 
