@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manna | Whole Yield</title>
+<meta name="description" content="Manna is a free Bible reading and study app, currently in private beta on TestFlight. Two public-domain translations, original languages, cross-references, commentary, plans, and prayer, with no ads and no account required.">
+<link rel="canonical" href="https://wholeyield.com/manna/">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfbf9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0e0d">
+<link rel="icon" href="/logo-mark-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/logo-mark.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manna, a Bible study app">
+<meta property="og:description" content="Free, no ads, no account required, and your study stays on your device. Currently in private beta on TestFlight.">
+<meta property="og:url" content="https://wholeyield.com/manna/">
+<meta property="og:image" content="https://wholeyield.com/manna/icon.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="The Manna app icon, a sheaf of wheat">
+
+<style>
+@font-face{font-family:'InterVar';src:url('/fonts/inter-latin.woff2') format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap}
+
+:root{
+  --bg:#fbfbf9; --surface:#ffffff; --tint:#f2f5f2;
+  --ink:#101511; --ink2:#535854; --ink3:#8e948e;
+  --line:#e7e8e4; --accent:#0a9d63; --accent-ink:#07784b; --accent-soft:#e2f4ec;
+  --sans:'InterVar',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --max:1080px; --r:18px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c0e0d;--surface:#141816;--tint:#141816;
+    --ink:#eef1ee;--ink2:#a2a9a3;--ink3:#767c77;
+    --line:#232825;--accent:#34d99b;--accent-ink:#5fe6b3;--accent-soft:#0f2a20}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:16px/1.65 var(--sans);background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;padding:0 clamp(20px,4vw,40px);letter-spacing:-.011em}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent-soft)}
+.wrap{max-width:var(--max);margin:0 auto}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:16px;letter-spacing:-.02em}
+.logo .mark{width:22px;height:22px;flex:none;display:block}
+.logo:hover{color:var(--accent)}
+.btn{background:var(--accent);color:#fff;font-weight:500;font-size:14.5px;
+  padding:9px 18px;border-radius:99px;white-space:nowrap;transition:opacity .16s}
+.btn:hover{opacity:.86}
+@media (prefers-color-scheme:dark){.btn{color:#08130e}}
+
+/* hero */
+.hero{position:relative;padding:clamp(52px,8vw,104px) 0 clamp(48px,6vw,80px);text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40% 20% auto;height:520px;
+  background:radial-gradient(closest-side,var(--accent-soft),transparent);
+  opacity:.85;z-index:-1;pointer-events:none}
+.appicon{width:clamp(76px,11vw,100px);height:auto;border-radius:22.5%;display:block;
+  margin:0 auto 22px;box-shadow:0 12px 32px -18px rgba(16,21,17,.4)}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;
+  color:var(--accent-ink);background:var(--accent-soft);padding:6px 14px;border-radius:99px}
+h1{font-size:clamp(34px,5.6vw,62px);line-height:1.06;letter-spacing:-.028em;font-weight:500;
+  margin:26px auto 22px;max-width:16ch}
+.lede{font-size:clamp(17px,1.7vw,19.5px);line-height:1.55;color:var(--ink2);
+  max-width:56ch;margin:0 auto}
+.cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ghost{border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  font-weight:500;font-size:14.5px;padding:9px 18px;border-radius:99px}
+.ghost:hover{border-color:var(--ink3)}
+
+section{padding:clamp(52px,7vw,92px) 0 0}
+.eyebrow{font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.01em}
+h2{font-size:clamp(25px,3.2vw,38px);line-height:1.12;letter-spacing:-.028em;
+  font-weight:500;margin:12px 0 18px;max-width:22ch}
+.body{color:var(--ink2);font-size:17px;max-width:60ch}
+.body p+p{margin-top:16px}
+.body a{color:var(--accent);font-weight:500}
+.body a:hover{color:var(--ink)}
+
+/* the statement panel */
+.panel{background:var(--tint);border:1px solid var(--line);border-radius:24px;
+  padding:clamp(28px,4.4vw,52px);margin-top:clamp(34px,4vw,48px)}
+.panel .quote{font-size:clamp(20px,2.7vw,30px);line-height:1.25;letter-spacing:-.028em;
+  font-weight:500;max-width:26ch}
+.panel .quote span{color:var(--accent)}
+.panel .after{margin-top:16px;color:var(--ink2);font-size:16px;max-width:60ch}
+.panel .after a{color:var(--accent);font-weight:500}
+.panel .after a:hover{color:var(--ink)}
+
+/* feature cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:16px;margin-top:clamp(28px,3.4vw,40px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 26px 28px;display:flex;flex-direction:column}
+.tag{font-size:12px;font-weight:500;color:var(--ink3)}
+.card h3{font-size:21px;font-weight:600;letter-spacing:-.026em;margin:9px 0 11px}
+.card p{color:var(--ink2);font-size:15.5px;flex:1}
+.more{margin-top:clamp(22px,3vw,30px)}
+
+/* beta box */
+.contact{padding-top:clamp(60px,7vw,96px)}
+.cbox{background:var(--tint);border:1px solid var(--line);border-radius:24px;
+  padding:clamp(30px,4.6vw,56px);text-align:center}
+.cbox h2{margin:0 auto 20px}
+.cmail{display:inline-block;font-size:clamp(19px,2.6vw,27px);font-weight:600;
+  letter-spacing:-.03em;color:var(--accent)}
+.cmail:hover{color:var(--ink)}
+.cwhere{margin-top:12px;color:var(--ink3);font-size:15px}
+
+footer{margin-top:clamp(64px,8vw,104px);padding:24px 0 56px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  color:var(--ink3);font-size:14px}
+footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="logo" href="/"><img class="mark" src="/logo-mark.png" width="128" height="128" alt="" aria-hidden="true" decoding="async">Whole Yield</a>
+    <a class="btn" href="mailto:danielh@wholeyield.com?subject=Manna%20beta">Ask to join the beta</a>
+  </nav>
+
+  <header class="hero">
+    <img class="appicon" src="icon.png" width="512" height="512" alt="The Manna app icon, a sheaf of wheat" decoding="async">
+    <span class="pill">Free &middot; in private beta on TestFlight</span>
+    <h1>The whole Bible, studied deeply, kept yours.</h1>
+    <p class="lede">Manna is a Bible reading and study app. The complete text in two public-domain translations, the original Hebrew and Greek, 344,799 cross-references, classic commentary, reading plans, and a place for notes and prayer. No ads, no analytics, no account required, and your study stays on your device.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:danielh@wholeyield.com?subject=Manna%20beta">Ask to join the beta</a>
+      <a class="ghost" href="/privacy.html">How it treats your data</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <p class="eyebrow">What it is</p>
+      <h2>A study library in one quiet app.</h2>
+      <div class="body">
+        <p>Open it and you are reading. The Bible text ships inside the app, so ordinary reading needs no connection at all, and everything else stays one tap from the plain text rather than in the way of it.</p>
+        <p>The study tools are the kind that usually take a shelf.</p>
+      </div>
+      <div class="cards">
+
+        <article class="card">
+          <span class="tag">The text</span>
+          <h3>Two translations, in parallel</h3>
+          <p>The Berean Standard Bible and the King James Version, both public domain, read one at a time or verse by verse side by side.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Study layers</span>
+          <h3>Connections and word study</h3>
+          <p>344,799 cross-references shown as full readable text rather than bare verse numbers, word study built on Strong's dictionaries, and the original Hebrew and Greek under every verse.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Commentary</span>
+          <h3>Two classic commentaries</h3>
+          <p>Matthew Henry's concise chapter commentary and the Jamieson, Fausset and Brown verse notes, folded in at the end of each chapter so the text itself stays first.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Habit</span>
+          <h3>Plans, stats, and memory</h3>
+          <p>Reading plans, including a whole Bible in a year and a chronological year, honest progress and streaks, and a spaced-repetition deck for committing verses to memory.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Yours</span>
+          <h3>Notes, highlights, prayer</h3>
+          <p>Highlights, verse notes, reflections, and a prayer list, stored on your device. Optional sync between your own devices exists, and it is off unless you turn it on.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">For families</span>
+          <h3>Kids stories</h3>
+          <p>Twenty illustrated Bible stories, retold simply and written to be read with a parent, each one a tap away from the real chapter it retells.</p>
+        </article>
+
+      </div>
+      <p class="body more">Also in there: streamed chapter narration, animated book overviews, a feed of biblical-archaeology news, and threads that map promises across the canon to the moments they are kept.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">The companion</p>
+      <h2>Manna Radio Theater.</h2>
+      <div class="body">
+        <p>A dramatized audio companion to the app: scripture staged with voices, music, and sound, while the words stay verbatim, nothing added to the text and nothing taken from it. The first episodes are in production now, alongside the beta.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Your data</p>
+      <h2>Nothing in it watches you read.</h2>
+      <div class="panel">
+        <p class="quote">No ads, no analytics, no tracking, no account required. Your notes and prayers <span>stay on your device</span>.</p>
+        <p class="after">That is not marketing shorthand. The <a href="/privacy.html">privacy policy</a> spells out, in plain language, exactly what the app does and does not do.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Getting it</p>
+      <h2>Free, and in private beta.</h2>
+      <div class="body">
+        <p>Manna is free, and always will be. There is no paywall and nothing in it is locked. If it becomes a gift to you, there is an optional way inside the app to help cover what it costs, and that is as commercial as it gets.</p>
+        <p>Right now Manna is in a small private beta for iPhone, distributed through Apple's TestFlight, and invitations are personal: email <a href="mailto:danielh@wholeyield.com?subject=Manna%20beta">danielh@wholeyield.com</a> and Daniel will set you up directly.</p>
+        <p>It is not on the App Store yet. When that changes, this page will say so.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Support</p>
+      <h2>When something goes wrong, a person answers.</h2>
+      <div class="body">
+        <p>Support for Manna is Daniel, the person who built it. The <a href="/manna/support.html">support page</a> says how to reach him, what helps in a report, and how your data can be exported or deleted.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="cbox">
+        <h2>Ask to join the beta.</h2>
+        <a class="cmail" href="mailto:danielh@wholeyield.com?subject=Manna%20beta">danielh@wholeyield.com</a>
+        <p class="cwhere">Free &middot; iPhone &middot; via Apple's TestFlight</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Whole Yield</span>
+    <span><a href="/">Home</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/manna/support.html">Support</a></span>
+    <span>Phoenix, Arizona</span>
+  </footer>
+
+</div>
+</body>
+</html>
