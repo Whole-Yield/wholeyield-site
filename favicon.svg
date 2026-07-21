@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Whole Yield">
-  <rect width="64" height="64" rx="13" fill="#0a9d63"/>
-  <path d="M13 19l8.5 26L32 27l10.5 18L51 19" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="Whole Yield">
+  <path fill="#68af4d" fill-rule="evenodd" d="M8 .15 1.2 4.07v7.86L8 15.85l6.8-3.92V4.07ZM8 2.45l4.8 2.78v5.54L8 13.55l-4.8-2.78V5.23Z"/>
+  <path fill="#3c9be9" d="M3.6 7.9h2v3.1h-2Zm3.4-1.7h2v4.8H7Zm3.4-1.7h2v6.5h-2Z"/>
 </svg>

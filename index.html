@@ -6,8 +6,9 @@
 <title>Whole Yield</title>
 <meta name="description" content="Whole Yield is the independent software and media studio of Daniel Horne, in Phoenix, Arizona.">
 <link rel="canonical" href="https://wholeyield.com/">
-<link rel="icon" href="/logo-mark-48.png" type="image/png" sizes="48x48">
-<link rel="apple-touch-icon" href="/logo-mark.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
 @font-face{font-family:'InterVar';src:url('fonts/inter-latin.woff2') format('woff2');
   font-weight:400 700;font-style:normal;font-display:swap}
@@ -16,13 +17,15 @@
   --bg:#fbfbf9; --surface:#ffffff; --tint:#f2f5f2;
   --ink:#101511; --ink2:#535854; --ink3:#8e948e;
   --line:#e7e8e4; --accent:#0a9d63; --accent-ink:#07784b; --accent-soft:#e2f4ec;
+  --leaf:#68af4d; --sky:#3c9be9; --navy:#2b689c;
   --sans:'InterVar',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --max:1080px; --r:18px;
 }
 @media (prefers-color-scheme:dark){
   :root{--bg:#0c0e0d;--surface:#141816;--tint:#141816;
     --ink:#eef1ee;--ink2:#a2a9a3;--ink3:#767c77;
-    --line:#232825;--accent:#34d99b;--accent-ink:#5fe6b3;--accent-soft:#0f2a20}
+    --line:#232825;--accent:#34d99b;--accent-ink:#5fe6b3;--accent-soft:#0f2a20;
+    --navy:#3d7fbe}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font:16px/1.65 var(--sans);background:var(--bg);color:var(--ink);
@@ -34,7 +37,7 @@ a{color:inherit;text-decoration:none}
 nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px}
 .logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:16px;letter-spacing:-.02em}
 .logo .mark{width:22px;height:22px;flex:none;display:block}
-.btn{background:var(--accent);color:#fff;font-weight:500;font-size:14.5px;
+.btn{background:var(--accent-ink);color:#fff;font-weight:500;font-size:14.5px;
   padding:9px 18px;border-radius:99px;white-space:nowrap;transition:opacity .16s}
 .btn:hover{opacity:.86}
 @media (prefers-color-scheme:dark){.btn{color:#08130e}}
@@ -56,7 +59,7 @@ h1{font-size:clamp(34px,5.6vw,62px);line-height:1.06;letter-spacing:-.028em;font
 .ghost:hover{border-color:var(--ink3)}
 
 section{padding:clamp(52px,7vw,92px) 0 0}
-.eyebrow{font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.01em}
+.eyebrow{font-size:13px;font-weight:500;color:var(--accent-ink);letter-spacing:.01em}
 h2{font-size:clamp(25px,3.2vw,38px);line-height:1.12;letter-spacing:-.028em;
   font-weight:500;margin:12px 0 18px;max-width:20ch}
 .body{color:var(--ink2);font-size:17px;max-width:60ch}
@@ -79,7 +82,7 @@ h2{font-size:clamp(25px,3.2vw,38px);line-height:1.12;letter-spacing:-.028em;
 .tag{font-size:12px;font-weight:500;color:var(--ink3)}
 .card h3{font-size:21px;font-weight:600;letter-spacing:-.026em;margin:9px 0 11px}
 .card p{color:var(--ink2);font-size:15.5px;flex:1}
-.state{margin-top:18px;font-size:13.5px;font-weight:500;color:var(--accent)}
+.state{margin-top:18px;font-size:13.5px;font-weight:500;color:var(--accent-ink)}
 
 /* contact */
 .contact{padding-top:clamp(60px,7vw,96px)}
@@ -101,7 +104,7 @@ footer a:hover{color:var(--ink)}
 <div class="wrap">
 
   <nav>
-    <span class="logo"><img class="mark" src="/logo-mark.png" width="128" height="128" alt="" aria-hidden="true" decoding="async">Whole Yield</span>
+    <span class="logo"><svg class="mark" viewBox="0 0 500 500" aria-hidden="true" focusable="false"><path fill="var(--leaf,#68af4d)" d="M54 339.7L54 139.8L249.1 27.3L444.5 139.9L444.5 335.5L418.7 335.5L418.7 154.6L249.2 56.9L79.5 154.7L79.5 339.7Z M110.7 372.8L98.4 395.2L249.3 477.7L438.2 368.8L425.4 346.6L249 448.3Z"/><path fill="var(--sky,#3c9be9)" d="M172.7 203.3L194.5 203.3L194.5 314.5L172.7 251.2Z M216.5 165L238.3 165L238.3 207.6L216.5 273.8Z M260 149.5L281.7 149.5L281.7 274.6L260 208.5Z M303.7 131.7L325.5 131.7L325.5 250.3L303.7 313.6Z"/><path fill="var(--navy,#2b689c)" d="M135 216.5L154.6 216.5L199 345.9L241.6 216.5L256.4 216.5L298.9 345.9L343.4 216.5L362.2 216.5L306.5 373.5L291.1 373.5L248.7 248L205.9 373.5L190.8 373.5Z"/></svg>Whole Yield</span>
     <a class="btn" href="mailto:danielh@wholeyield.com">Get in touch</a>
   </nav>
 
