@@ -39,5 +39,11 @@ Also: no em dashes in the copy, per Daniel's standing rule.
 
 ## DNS
 
-DNS is not managed here. See `DNS-RUNBOOK.md` for the records to add and the
-warning about not disturbing the Google Workspace MX records.
+DNS is not managed here, and the runbook is deliberately not in this repo.
+This repo is public, so the runbook named the registrar, the exact mail
+records and the literal sender-policy string, which is a gift to anyone
+planning a domain hijack or a phishing run. It now lives outside version
+control. Ask Daniel for it. Do not reintroduce it, or a summary of it, here.
+
+The one thing worth stating in public: this repo only ever affects the web
+side. Leave the mail records alone.
