@@ -50,7 +50,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0
 .pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;
   color:var(--accent-ink);background:var(--accent-soft);padding:6px 14px;border-radius:99px}
 h1{font-size:clamp(34px,5.6vw,62px);line-height:1.06;letter-spacing:-.028em;font-weight:500;
-  margin:26px auto 22px;max-width:16ch}
+  margin:26px auto 22px;max-width:16ch;text-wrap:balance}
 .lede{font-size:clamp(17px,1.7vw,19.5px);line-height:1.55;color:var(--ink2);
   max-width:56ch;margin:0 auto}
 .cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -78,7 +78,8 @@ h2{font-size:clamp(25px,3.2vw,38px);line-height:1.12;letter-spacing:-.028em;
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   padding:26px 26px 28px;display:flex;flex-direction:column;
   transition:border-color .18s,transform .18s}
-.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card--link{cursor:pointer}
+.card--link:hover{border-color:var(--accent);transform:translateY(-2px)}
 .tag{font-size:12px;font-weight:500;color:var(--ink3)}
 .card h3{font-size:21px;font-weight:600;letter-spacing:-.026em;margin:9px 0 11px}
 .card p{color:var(--ink2);font-size:15.5px;flex:1}
@@ -109,7 +110,7 @@ footer a:hover{color:var(--ink)}
   </nav>
 
   <header class="hero">
-    <span class="pill">Independent studio, Phoenix Arizona</span>
+    <span class="pill">Independent studio, Phoenix, Arizona</span>
     <h1>Software and media, built small and built to last.</h1>
     <p class="lede">Whole Yield is the independent studio of Daniel Horne. It is where a handful of long-running projects live: a Bible study app, a podcast post-production service, and the audio work behind a show.</p>
     <div class="cta">
@@ -136,7 +137,7 @@ footer a:hover{color:var(--ink)}
       <h2>Three things, carried a long way.</h2>
       <div class="cards">
 
-        <article class="card">
+        <article class="card card--link">
           <span class="tag">Bible study app</span>
           <h3>Manna</h3>
           <p>A Bible reading and study app built on a public-domain translation, paired with Manna Radio Theater, a dramatized audio companion that keeps the scripture text verbatim. Built so the plain text is always one tap away from anything else on the screen.</p>
@@ -150,7 +151,7 @@ footer a:hover{color:var(--ink)}
           <span class="state">Launching soon</span>
         </article>
 
-        <article class="card">
+        <article class="card card--link">
           <span class="tag">Podcast, co-hosted</span>
           <h3>Perfume(D)ecay</h3>
           <p>A podcast Daniel co-hosts with two others as equal partners. Whole Yield is not the owner of the show. It is where Daniel's side of the work lives: production, audio tooling, and post.</p>
